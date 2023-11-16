@@ -5,7 +5,6 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { useNavigation } from '@react-navigation/native';
 
-
 const HomeScreen = () =>{
     const navigationHook = useNavigation();    
     const handleClick = () => {    
@@ -14,6 +13,11 @@ const HomeScreen = () =>{
     };
     const navigation = useNavigation();    
     const Click = () => {    
+        console.log('boton');
+        navigationHook.navigate('Calendar')  
+    };
+    const Navigate = useNavigation();    
+    const Vibes = () => {    
         console.log('boton');
         navigationHook.navigate('Calendar')  
     };
@@ -29,6 +33,11 @@ const HomeScreen = () =>{
         <Button
             title="Calendario"
             onPress={Click}
+        />
+        <Text> </Text>
+        <Button
+            title="Vibracion"
+            onPress={Vibes}
         />
         </View>
     );
